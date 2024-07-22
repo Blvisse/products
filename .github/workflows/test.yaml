@@ -17,8 +17,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Loading Python
-        run : |
-          
-          pip install pandas
-          
-          echo "Successfully Installed pandas"
+        run : pip install pandas
