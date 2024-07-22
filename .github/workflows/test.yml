@@ -1,20 +1,21 @@
 name: Mic cheque one two
 on:
   pull_request:
-    branches: [main]
+    branches: [ main ]
   push:
-    branches: [main]
+    branches: [ main ]
 jobs:
 
   build-python:
     runs-on: {{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest,macOS-latest]
+        os: [ ubuntu-latest,macOS-latest ]
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/checkout@v4
+
 
       - name: Loading Python
-        run : pip install pandas
+        uses: actions/checkout@v4
+        run: pip install pandas
