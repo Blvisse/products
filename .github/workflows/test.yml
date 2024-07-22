@@ -13,5 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Loading Python
-        run: pip install pandas
+      - name: Loading pandas
+        run: |
+
+          pip install pandas
+          
+          echo "Finished setting up successfully"
+
+      - name: Setting up python
+        uses: actions/checkout@v4
