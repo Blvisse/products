@@ -1,0 +1,24 @@
+name: Mic cheque one two
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+jobs:
+
+  build-python:
+    runs-on: ubuntu-latest
+    
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Loading pandas
+        run: |
+
+          pip install pandas
+          
+          echo "Finished setting up successfully"
+
+      - name: Setting up python
+        uses: actions/checkout@v4
