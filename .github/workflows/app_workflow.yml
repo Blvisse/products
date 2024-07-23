@@ -1,0 +1,26 @@
+name : Actions for fastapi application
+on:
+  pull_request:
+    branches: [ main ]
+
+  push:
+    branches: [ main ]
+    paths:
+      - "scripts/**"
+      - "backend/**"
+
+jobs:
+  build-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v3
+        name: Setting up Python
+
+      - name: Installing Dependencies
+        run: |
+          pip install -r requirements.txt
+
+
+

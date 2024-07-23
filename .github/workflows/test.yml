@@ -1,4 +1,4 @@
-name: Mic cheque one two
+name: Products Github Workflows
 on:
   pull_request:
     branches: [ main ]

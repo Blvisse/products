@@ -1,0 +1,6 @@
+name: A github action that does some Docker stuff
+description: A github docker action
+author: Blaise Papa
+
+runs:
+  using: python
