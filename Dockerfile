@@ -1,15 +1,23 @@
-FROM python:3.13.0b4-slim-bullseye
+FROM python:3.12.3-slim-bullseye
 
 
 
 RUN echo ls
-COPY dsa /backend/dsa
-COPY scripts /backend/scripts
-COPY tests /backend/tests
+#COPY dsa /product/dsa
+#COPY scripts /product/scripts
+#COPY tests /product/tests
+#COPY backend /product/backend
 
-WORKDIR /backend
+COPY . /product/
 
-CMD ["python", "/backend/scripts/add.py"]
+
+
+WORKDIR /product
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install -r requirements.txt
+RUN chmod +x /product/start.sh
+
+CMD ["/product/start.sh"]
 
 
 
