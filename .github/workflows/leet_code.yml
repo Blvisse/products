@@ -2,12 +2,10 @@ name: Leet Code Tests
 on:
   pull_request:
     branches: [ main ]
-    paths:
-      - "/leet/**"
   push:
     branches: [ main ]
     paths:
-      - "/leet/**"
+      - "leet/**"
 
 jobs:
 
