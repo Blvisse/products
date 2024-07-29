@@ -1,0 +1,29 @@
+name: Leet Code Tests
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+    paths:
+      - "leet/**"
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v3
+        name: Checkout source code
+
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: installing python
+        uses: actions/checkout@v2
+      - name: run tests
+        shell: bash
+        run: ./cli.sh
+
+
+
+
